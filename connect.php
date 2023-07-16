@@ -6,6 +6,7 @@
     $user = "root";
     $password = "";
     $database = "test";
+    $sql = "";
     $result = array();
 
     $db = adoNewConnection($driver);
