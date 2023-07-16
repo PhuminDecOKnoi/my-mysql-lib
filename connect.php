@@ -1,7 +1,8 @@
 <?php
+    
     require_once('./adodb/adodb.inc.php'); //C:\xampp\htdocs\my-mysql-lib\adodb\adodb.inc.php
 
-    $driver = 'mysqli';
+    $driver = "mysqli";
     $localost = "localhost";
     $user = "root";
     $password = "";
