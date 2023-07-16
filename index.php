@@ -11,4 +11,9 @@
     $result = $conn->getAll($sql);
 
     print_r($result);
+
+    $sql = 'SELECT * FROM `tb_test`';
+    $result = $conn->getAll($sql);
+
+    print_r($result);
 ?>
