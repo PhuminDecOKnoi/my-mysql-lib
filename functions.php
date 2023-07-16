@@ -1,7 +1,6 @@
 <?php
-    
     require_once('./adodb/adodb.inc.php'); //C:\xampp\htdocs\my-mysql-lib\adodb\adodb.inc.php
-
+    
     define("DRIVER","mysqli");
     define("LOCALHOST","localhost");
     define("USER","root");
@@ -34,5 +33,8 @@
         $result = $con->Execute($sql);
         $num_row_user = $result->recordCount();
         return (int) $num_row_user;
+    }
+    function title_index_page(){
+        echo "index page";
     }
 ?>
