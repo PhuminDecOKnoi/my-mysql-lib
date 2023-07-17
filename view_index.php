@@ -14,5 +14,9 @@
         print_r($get_tests);
         echo $num_rows_test;
     ?>
+    <div>
+        <div><?= $num_rows_user[0][0]?></div>
+        <div></div>
+    </div>
 </body>
 </html>
