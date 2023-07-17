@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title><?php title_index_page(); ?></title>
+        <title><?= title_index_page(); ?></title>
     </head>
 <body>
 
