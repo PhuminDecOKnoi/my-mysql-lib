@@ -13,9 +13,5 @@
     $get_users = select_tb_user($conn);
     $get_tests  = select_tb_test($conn);
 
-    $ADODB_COUNTRECS = TRUE;
-    $num_rows_user = count_rows_user($conn);
-    $num_rows_test = count_rows_test($conn);
-
     include_once("view_index.php");
 ?>
