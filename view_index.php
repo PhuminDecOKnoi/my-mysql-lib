@@ -19,10 +19,6 @@
         <div><?= $get_tests[1]?></div>
         <div><?= $get_tests[2]?></div>
     </div>
-    <div>
-        <?php if(isset($_GET['get']))
-            echo $_GET['get'];
-        ?>
-    </div>
+    <div></div>
 </body>
 </html>
