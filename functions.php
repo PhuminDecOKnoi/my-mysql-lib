@@ -32,7 +32,7 @@
     function title_index_page(){
         echo "index page";
     }
-    function title_register_page(){
-        echo "register page";
+    function title_count_page(){
+        echo "count page";
     }
 ?>
