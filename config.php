@@ -9,5 +9,4 @@
 
     define("TB_USERS","`tb_user`");
     define("TB_TESTS","`tb_test`");
-
 ?>
