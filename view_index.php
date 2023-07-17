@@ -7,16 +7,17 @@
 
     <h1>Adodb Query</h1>
     <hr/>
-    <?php 
-        print_r($get_users);
-        echo $num_rows_user;
-
-        print_r($get_tests);
-        echo $num_rows_test;
-    ?>
+    <?= print_r($get_users); ?>
+    <hr/>
+    <?= print_r($get_tests);?>
     <div>
-        <div><?= $num_rows_user[0][0]?></div>
-        <div></div>
+        <div><?= $get_users[1]?></div>
+        <div><?= $get_users[2]?></div>
+        <div><?= $get_users[3]?></div>
+    </div>
+    <div>
+        <div><?= $get_tests[1]?></div>
+        <div><?= $get_tests[2]?></div>
     </div>
 </body>
 </html>
