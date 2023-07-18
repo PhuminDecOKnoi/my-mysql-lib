@@ -4,7 +4,7 @@
         <title><?= title_index_page(); ?></title>
     </head>
 <body>
-
+    <!-- Start Page-->
     <h1>Adodb Query</h1>
     <hr/>
     <?= print_r($get_users); ?>
@@ -20,5 +20,6 @@
         <div><?= $get_tests[2]?></div>
     </div>
     <div></div>
+    <!-- End Page-->
 </body>
 </html>
