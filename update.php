@@ -12,7 +12,7 @@
    if(!$conn) $message = "Disconnected with MySQL";
   
     // Update by record array
-   $record["user"] = "phumin_ak00999944444000555555555_222";
+   $record["user"] = "phumin_ak666667777776666777777_222";
    $record["Password"]  = "12345XXXXXXX_ak"; 
 
    if(isset($get)){
@@ -24,5 +24,10 @@
         $message = "id not isset !";
     }
 
-   include_once("view_update.php"); //display index => HTML file.
+   // start Starty
+   $smarty = smarty();
+   $smarty->assign('title','Update page');
+   $smarty->assign('message',$message);
+   
+   $smarty->display('update.tpl');
 ?>
