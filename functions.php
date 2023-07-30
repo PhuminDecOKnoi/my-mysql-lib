@@ -5,6 +5,7 @@
     function conn(){
         $db = adoNewConnection(DRIVER);
         $db->connect(LOCALHOST,USER,PWD,DB);
+        $db->debug = false;
         return $db;
     }
     function select_tb_user($con){
