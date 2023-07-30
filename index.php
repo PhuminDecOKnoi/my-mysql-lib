@@ -3,15 +3,17 @@
     include("./functions.php");
 
     $sql = "";
-    $get_user = array();
+    $query = false;
+    $message = "";
+
     $get_test = array();
 
     $conn = conn(); // Connected with mySQL.
-    if(!$conn) die("Disconnected with MySQL");
+    if(!$conn) $message = "Disconnected with MySQL";
 
     $ADODB_FETCH_MODE = ADODB_FETCH_NUM; //return query like rows.
-    $get_users = select_tb_user($conn);
-    $get_tests  = select_tb_test($conn);
+    $sql ="SELECT * FROM `tb_test`";
+    $query = $conn->execute($sql);
 
     include_once("view_index.php"); //display index => HTML file.
 ?>
