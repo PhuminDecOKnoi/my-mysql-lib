@@ -8,6 +8,26 @@
         $db->debug = false;
         return $db;
     }
+
+    function smarty(){
+        $smarty = new Smarty();
+        $smarty->setTemplateDir('./template/');
+        $smarty->setConfigDir('./config/');
+        $smarty->setCompileDir('./compile/');
+        $smarty->setCacheDir('./cache/');
+        
+        // the number of seconds a cache is good for
+        $smarty->setCaching(Smarty::CACHING_LIFETIME_CURRENT);
+
+        // retain current cache lifetime for each specific display call
+        $smarty->setCaching(Smarty::CACHING_LIFETIME_SAVED);
+
+        // set the cache_lifetime for any file.tpl to 5 minutes
+        $smarty->setCacheLifetime(300);
+
+        return $smarty;
+    }
+
     function select_tb_user($con){
         $sql = 'SELECT * FROM '.TB_USERS;
         $result = $con->GetRow($sql);
