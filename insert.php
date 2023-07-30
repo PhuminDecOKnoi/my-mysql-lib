@@ -17,5 +17,10 @@
 
    if($query) $message = "Inserted !";
 
-   include_once("view_insert.php"); //display index => HTML file.
+   // start Starty
+   $smarty = smarty();
+   $smarty->assign('title','Insert page');
+   $smarty->assign('message',$message);
+   
+   $smarty->display('insert.tpl');
 ?>
