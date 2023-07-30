@@ -2,6 +2,7 @@
 
     include_once('./config.php');
 
+    //ADODB PHP
     function conn(){
         $db = adoNewConnection(DRIVER);
         $db->connect(LOCALHOST,USER,PWD,DB);
