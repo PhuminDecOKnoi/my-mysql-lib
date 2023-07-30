@@ -15,5 +15,10 @@
         if($query) $message ="Deleted record=".$get;
    }
 
-   include_once("view_delete.php"); //display index => HTML file.
+   // start Starty
+   $smarty = smarty();
+   $smarty->assign('title','Delete page');
+   $smarty->assign('message',$message);
+   
+   $smarty->display('delete.tpl');
 ?>
