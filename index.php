@@ -5,6 +5,8 @@
     $sql = "";
     $query = false;
     $message = "";
+    $arr = array();
+    $i = 0;
 
     $get_test = array();
 
@@ -16,16 +18,13 @@
     $query = $conn->execute($sql);
 
     // FetchRow
-    $arr = array();
-    $i =0;
+
     while($result = $query->fetchrow()){
         $arr[$i] = $result;
         $i++;
     }
-
-    // include_once("view_index.php"); //display index => HTML file.
+    // start Starty
     $smarty = smarty();
-
     $smarty->assign('title','Index page');
     $smarty->assign('message',$message);
     $smarty->assign('arr',$arr); //sql->excute->fetchrow
