@@ -24,7 +24,7 @@
         $smarty->setCaching(Smarty::CACHING_LIFETIME_SAVED);
 
         // set the cache_lifetime for any file.tpl to 5 minutes
-        $smarty->setCacheLifetime(300);
+        $smarty->setCacheLifetime(60);
 
         return $smarty;
     }
