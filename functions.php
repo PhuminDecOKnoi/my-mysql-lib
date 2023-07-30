@@ -36,4 +36,17 @@
     function title_count_page(){
         echo "count page";
     }
+    function inserted_record($conn,$record){
+        $conn->autoExecute(TB_TESTS,$record,'INSERT');
+        return $conn;
+    }
+    function updated_record($conn,$record,$where){
+        $conn->autoExecute(TB_TESTS,$record,'UPDATE',$where);
+        return $conn;
+    }
+    function deleted_record($conn,$get){
+        $sql = "DELETE FROM ".TB_TESTS." WHERE ID=".$get.";"; // echo $sql;
+        $conn->Execute($sql);
+        return $conn;
+    }
 ?>
