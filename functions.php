@@ -15,16 +15,16 @@
         $smarty->setTemplateDir('./template/');
         $smarty->setConfigDir('./config/');
         $smarty->setCompileDir('./compile/');
-        // $smarty->setCacheDir('./cache/');
+        $smarty->setCacheDir('./cache/');
         
         // the number of seconds a cache is good for
-        // $smarty->setCaching(Smarty::CACHING_LIFETIME_CURRENT);
+        $smarty->setCaching(Smarty::CACHING_LIFETIME_CURRENT);
 
         // retain current cache lifetime for each specific display call
-        // $smarty->setCaching(Smarty::CACHING_LIFETIME_SAVED);
+        $smarty->setCaching(Smarty::CACHING_LIFETIME_SAVED);
 
         // set the cache_lifetime for any file.tpl to 5 minutes
-        // $smarty->setCacheLifetime(60);
+        $smarty->setCacheLifetime(60);
 
         return $smarty;
     }
